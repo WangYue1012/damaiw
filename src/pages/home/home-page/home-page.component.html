@@ -1,0 +1,32 @@
+<button (click)="sortByAsccending()">正序排列</button>
+<button (click)="sortByDesccending()">倒序排列</button>
+<button (click)="sortByRadom()">随机打乱</button>
+<button (click)="deleteLast()">删除最后一个</button>
+<button (click)="saveNewUser()">新增一个</button>
+<table>
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>艺人</th>
+      <th>主题</th>
+      <th>时间</th>
+      <th>地点</th>
+      <th>价位1</th>
+      <th>价位2</th>
+      <th>价位3</th>
+      <th>售票状态</th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.index}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.theme}}</td>
+      <td>{{user.place}} </td>
+      <td>{{user.price1}}</td>
+      <td>{{user.price2}} </td>
+      <td>{{user.price3}}</td>
+      <td>{{user.tic_sta}}</td>
+    </tr>
+  </tbody>
+</table>
